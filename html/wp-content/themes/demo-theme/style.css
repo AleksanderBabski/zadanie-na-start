@@ -7,10 +7,10 @@ Text Domain: demo-theme
 */
 
 /* Tutaj później zaczniesz pisać swój kod CSS (zmienne, grid, flexbox) */
+
 :root {
-    --primary-color: #0073aa;
-    --text-color: #333333;
-    /* margin: 20px; */
+    --primary-color: var(--wp--preset--color--primary, #0073aa);
+    --text-color: var(--wp--preset--color--secondary, #333333);
 }
 
 .content-container {
