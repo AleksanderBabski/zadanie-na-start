@@ -12,3 +12,9 @@ Text Domain: demo-theme
     --primary-color: #0073aa;
     --text-color: #333333;
 }
+
+
+h2 {
+    color: purple;
+}
+
