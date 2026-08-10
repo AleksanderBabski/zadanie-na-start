@@ -1,7 +1,6 @@
 /*
 Theme Name: Demo Theme
 Author: Aleksander Bąbski
-Author URI: https://github.com/AleksanderBabski
 Description: Demonstracyjny motyw z wykorzystaniem Gutenberga, CPT i RWD.
 Version: 1.0.0
 Text Domain: demo-theme
@@ -14,7 +13,33 @@ Text Domain: demo-theme
 }
 
 
-h2 {
-    color: purple;
+/* Layout strony głównej */
+.hero-section {
+    padding: 2rem 0;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 2rem;
 }
 
+/* Siatka projektów - CSS Grid z RWD */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.2rem;
+    background: #fff;
+}
+
+.project-tags .tag {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-right: 0.3rem;
+}

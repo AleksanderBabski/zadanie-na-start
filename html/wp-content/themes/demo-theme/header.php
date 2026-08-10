@@ -10,8 +10,7 @@
     <header class="site-header">
         <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
         <p><?php bloginfo( 'description' ); ?></p>
-        
-        <!-- Tu w przyszłości wstawisz nawigację -->
+
          <nav class="main-nav">
         <?php
         wp_nav_menu( array(
