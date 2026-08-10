@@ -15,12 +15,14 @@
 /html/wp-content/themes/twentytwentyfive/
 /html/wp-content/themes/index.php
 
-# Ignoruj domyślne wtyczki, media i pliki tymczasowe
-/html/wp-content/plugins/hello.php
-/html/wp-content/plugins/akismet/
+# Ignoruj wszystkie wtyczki WordPressa
+/html/wp-content/plugins/
+
+# Ignoruj media, języki i pliki tymczasowe
 /html/wp-content/uploads/
 /html/wp-content/upgrade/
 /html/wp-content/cache/
+/html/wp-content/languages/
 
 # Systemowe pliki tymczasowe
 .DS_Store

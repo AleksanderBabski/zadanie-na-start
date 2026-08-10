@@ -1,1 +1,14 @@
-/* Theme Name: Demo Theme */
+/*
+Theme Name: Demo Theme
+Author: Aleksander Bąbski
+Author URI: https://github.com/AleksanderBabski
+Description: Demonstracyjny motyw z wykorzystaniem Gutenberga, CPT i RWD.
+Version: 1.0.0
+Text Domain: demo-theme
+*/
+
+/* Tutaj później zaczniesz pisać swój kod CSS (zmienne, grid, flexbox) */
+:root {
+    --primary-color: #0073aa;
+    --text-color: #333333;
+}
