@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<section class="hero-section">
+<div class="content-container">
+    <section class="hero-section">
     <h1>Zadanie na start - Demo Theme</h1>
     <p>front-page.php</p>
 </section>
@@ -65,5 +66,6 @@
         <?php endif; ?>
     </div>
 </section>
+</div>
 
 <?php get_footer(); ?>

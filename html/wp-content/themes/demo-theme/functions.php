@@ -164,3 +164,37 @@ function demo_theme_register_menus()
     ));
 }
 add_action('after_setup_theme', 'demo_theme_register_menus');
+
+
+//Formularz kontaktowy
+
+function demo_theme_handle_contact_form()
+{
+    // 1. Weryfikacja klucza bezpieczeństwa Nonce (zabezpieczenie przed CSRF)
+    if (!isset($_POST['contact_nonce']) || !wp_verify_nonce($_POST['contact_nonce'], 'contact_form_submit')) {
+        wp_die('Błąd bezpieczeństwa! Nieprawidłowy żeton nonce.');
+    }
+
+    // 2. Pobranie i SANITYZACJA danych z $_POST (Ochrona przed XSS i SQL Injection)
+    $name = isset($_POST['contact_name']) ? sanitize_text_field($_POST['contact_name']) : '';
+    $email = isset($_POST['contact_email']) ? sanitize_email($_POST['contact_email']) : '';
+    $message = isset($_POST['contact_message']) ? sanitize_textarea_field($_POST['contact_message']) : '';
+
+    // 3. Walidacja danych
+    if (empty($name) || empty($email) || !is_email($email) || empty($message)) {
+        // Przekierowanie powrotne z informacją o błędzie
+        wp_redirect(add_query_arg('contact_status', 'error', wp_get_referer()));
+        exit;
+    }
+
+    // 4. Przetworzenie danych (w rzeczywistym projekcie tu wywołalibyśmy wp_mail())
+    // wp_mail( get_option('admin_email'), 'Nowa wiadomość od ' . $name, $message );
+
+    // 5. Przekierowanie HTTP 302 powrotne po sukcesie (Wzorzec Post/Redirect/Get - zapobiega ponownemu wysłaniu formularza po odświeżeniu)
+    wp_redirect(add_query_arg('contact_status', 'success', wp_get_referer()));
+    exit;
+}
+
+// Hooki przechwytujące żądanie HTTP POST wysłane do admin-post.php z action="submit_contact_form"
+add_action('admin_post_nopriv_submit_contact_form', 'demo_theme_handle_contact_form'); // Dla niezalogowanych
+add_action('admin_post_submit_contact_form', 'demo_theme_handle_contact_form');        // Dla zalogowanych
