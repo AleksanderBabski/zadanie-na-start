@@ -16,8 +16,6 @@
                     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                 </svg>
             </a>
-
-            <!-- Przycisk menu mobilnego (Hamburger) -->
             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                 <span class="screen-reader-text">Menu</span>
                 <span class="hamburger-bar"></span>
