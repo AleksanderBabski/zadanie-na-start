@@ -16,6 +16,20 @@ body {
   min-height: 100vh;
 }
 
+a {
+  color: var(--text-color, #333);
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color, #0073aa);
+  text-decoration: none;
+}
+
 /* Korekta wysokości przy zalogowanym pasku administratora WordPress */
 body.admin-bar {
   min-height: calc(100vh - 32px);
@@ -45,9 +59,9 @@ body.admin-bar {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .site-footer p {
