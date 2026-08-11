@@ -1,10 +1,12 @@
-</main> <!-- Koniec .site-main z header.php -->
-    
-    <footer class="site-footer">
-        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-    </footer>
+</main>
 
-    <!-- wp_footer() jest wymagane! -->
-    <?php wp_footer(); ?>
+<footer class="site-footer">
+    <div class="footer-container">
+        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+        <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="btn-primary">Kontakt</a>
+    </div>
+</footer>
+<?php wp_footer(); ?>
 </body>
+
 </html>

@@ -5,13 +5,15 @@
   display: inline-block;
   background-color: var(--primary-color, #0073aa);
   color: #ffffff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.65rem 1.25rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.2s ease;
   border: none;
   cursor: pointer;
+  box-sizing: border-box;
+  line-height: 1.2;
 }
 
 .btn-primary:hover {
@@ -27,6 +29,8 @@
   text-decoration: none;
   font-size: 0.9rem;
   transition: background-color 0.2s ease;
+  box-sizing: border-box;
+  line-height: 1.2;
 }
 
 .github-btn:hover {
