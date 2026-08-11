@@ -1,0 +1,26 @@
+:root {
+  --primary-color: var(--wp--preset--color--primary, #0073aa);
+  --text-color: var(--wp--preset--color--secondary, #333333);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--text-color, #333);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.content-container {
+  margin: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Layout strony głównej */
+.hero-section {
+  padding: 2rem 0;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 2rem;
+}

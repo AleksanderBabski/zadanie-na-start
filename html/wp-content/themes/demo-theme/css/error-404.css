@@ -1,0 +1,34 @@
+/* ==========================================================================
+   404 Page Styles
+   ========================================================================== */
+
+.error-404-container {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.error-404 .page-title {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--primary-color, #0073aa);
+  margin: 0;
+  line-height: 1;
+}
+
+.error-404 h2 {
+  font-size: 1.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color, #333333);
+}
+
+.error-404 .page-content p {
+  font-size: 1.1rem;
+  color: #666666;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.search-form-wrapper {
+  margin-bottom: 2rem;
+}
